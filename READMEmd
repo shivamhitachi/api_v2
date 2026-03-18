@@ -1,0 +1,28 @@
+#Weather API
+
+#Changing the Data Path
+
+The API needs to know where your .zarr model data is stored. You can change this path by editing the config.yaml file located in the root directory.
+
+1. Open config.yaml.
+2. Update the outputs_dir under the paths section to point to your new data drive:
+    paths:
+      outputs_dir: "/new/path/to/your/data_drive"
+      run_folder: "fcn3_stormcast"
+
+
+
+#Running the Code
+
+1. Open your terminal and navigate to the folder api.
+2. Ensure your virtual environment is activated using "source venv/bin/activated".
+3. Start the server using Uvicorn:
+    uvicorn fast_api:app --reload --host 127.0.0.1 --port 8000
+
+#Running the Code
+
+1. chmod +x start_api.sh
+2. ./start_api.sh    or  ~/IdeaProjects/api/start_api.sh
+
+#For running UI
+-> Run bash /home/deepu/Desktop/start_Earth2UI.sh   command in terminal for initializing the UI.
